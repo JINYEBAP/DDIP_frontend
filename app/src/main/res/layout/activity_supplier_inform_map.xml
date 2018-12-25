@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+   >
+    <LinearLayout
+        android:id="@+id/MapTitleWrapper"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:background="#7db57c"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/MapTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:fontFamily="@font/bmdohyeon"
+            android:gravity="center"
+            android:text="DDIP 가게 정보"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/mapview"
+                android:layout_width="match_parent"
+                android:layout_height="382dp"
+                android:baselineAligned="false"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/dist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="거리"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/mylocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:layout_weight="1"
+                    android:text="내 위치로" />
+
+                <Button
+                    android:id="@+id/storelocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:layout_weight="1"
+                    android:text="가게 위치로" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

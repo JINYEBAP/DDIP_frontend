@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MapActivity">
+    <LinearLayout
+        android:id="@+id/MapTitleWrapper"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:background="#7db57c"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/MapTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:fontFamily="@font/bmdohyeon"
+            android:gravity="center"
+            android:text="DDIP 가게 위치 찾기"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="원하는 지역에 있는 가게를 검색해보세요!"
+                android:textAlignment="center" />
+
+            <LinearLayout
+                android:id="@+id/simple_spinner_dropdown_item"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/si_spinner"
+                    android:layout_width="180dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1" />
+
+                <Spinner
+                    android:id="@+id/sgg_spinner"
+                    android:layout_width="180dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:text="탐색" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/mapview"
+                android:layout_width="match_parent"
+                android:layout_height="382dp"
+                android:baselineAligned="false"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/mylocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:layout_weight="1"
+                    android:text="내 위치로" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:orientation="horizontal">
+
+                <SeekBar
+                    android:id="@+id/seekBar"
+                    style="@style/Widget.AppCompat.SeekBar.Discrete"
+                    android:layout_width="273dp"
+                    android:layout_height="match_parent"
+                    android:max="30000"
+                    android:progress="100" />
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="45dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="탐색" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="원하는 거리 내의 가게를 검색해보세요!"
+                android:textAlignment="center" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

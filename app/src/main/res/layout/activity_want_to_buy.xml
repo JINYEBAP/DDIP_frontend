@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    >
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+
+        <RelativeLayout
+            android:id="@+id/contents"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/WantToBuyTitleWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:background="#7db57c"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/WantToBuyTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/bmdohyeon"
+                    android:gravity="center"
+                    android:text="삽니다 등록/관리"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    android:textColor="#FFFFFF" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/enroll_t"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/WantToBuyTitleWrapper"
+                android:fontFamily="@font/bmdohyeon"
+                android:padding="10dp"
+                android:text="삽니다 등록"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            <LinearLayout
+                android:id="@+id/guideline4"
+                android:layout_below="@id/enroll_t"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="0dp"
+                android:background="#7db57c"
+                android:orientation="horizontal">
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="492dp"
+                android:layout_below="@+id/guideline4"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="0dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/category_t"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:gravity="center_vertical"
+                        android:text="카테고리"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+                    <Spinner
+                        android:id="@+id/categorySpinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="46dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1.0"
+                        android:gravity="center"
+                        android:textAlignment="center" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:id="@+id/PriceRange_t"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:text="가격 범위"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.0"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/minPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/textfield_line"
+                            android:ems="10"
+                            android:inputType="textPersonName|number"
+                            android:padding="10dp" />
+
+                        <TextView
+                            android:id="@+id/textView8"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="7"
+                            android:gravity="center"
+                            android:text="~"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+                        <EditText
+                            android:id="@+id/maxPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/textfield_line"
+                            android:ems="10"
+                            android:inputType="textPersonName|number"
+                            android:padding="10dp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/want_to_buy_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#7db57c"
+                    android:text="삽니다 등록"
+                    android:textColor="#FFFFFF" />
+                <TextView
+                    android:id="@+id/management_t"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/WantToBuyTitleWrapper"
+                    android:fontFamily="@font/bmdohyeon"
+                    android:padding="10dp"
+                    android:text="삽니다 관리"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                <LinearLayout
+                    android:id="@+id/guideline3"
+                    android:layout_below="@id/management_t"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:background="#7db57c"
+                    android:orientation="horizontal">
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/columnWrapper"
+                    android:layout_below="@+id/ReviewWriteTitleWrapper"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:id="@+id/WTBcategory_t_wrapper"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/WTBcategory_t"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="카테고리"
+                            android:textAppearance="@style/TextAppearance.Compat.Notification.Title" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/WTBminPrice_t_wrapper"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/WTBminPrice_t"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="최소 가격"
+                            android:textAppearance="@style/TextAppearance.Compat.Notification.Title" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/WTBmaxPrice_t_wrapper"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/WTBmaxPrice_t"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="최대 가격"
+                            android:textAppearance="@style/TextAppearance.Compat.Notification.Title" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/WTBdelete_t_wrapper"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/WTBdelete_t"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="삭제"
+                            android:textAppearance="@style/TextAppearance.Compat.Notification.Title" />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/guideline2"
+                    android:layout_below="@id/columnWrapper"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:background="#7db57c"
+                    android:orientation="horizontal">
+                </LinearLayout>
+
+                <ScrollView
+                    android:id="@+id/WantToBuyManageScroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/WantToBuyManage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+                </ScrollView>
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/drawer_menulist"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:background="#7db57c" />
+    </android.support.v4.widget.DrawerLayout>
+</android.support.constraint.ConstraintLayout>

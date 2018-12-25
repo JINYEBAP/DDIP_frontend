@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    >
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+
+        <RelativeLayout
+            android:id="@+id/contents"
+            android:layout_width="match_parent"
+            android:background="#FFFFFF"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/UploadItemTitleWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:background="#7db57c"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/UploadItemTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/bmdohyeon"
+                    android:gravity="center"
+                    android:text="팝니다 등록/관리"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    android:textColor="#FFFFFF" />
+            </LinearLayout>
+
+                <ScrollView
+                    android:id="@+id/UploadItemWrapperScroll"
+                    android:layout_below="@id/UploadItemTitleWrapper"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/UploadItemWrapper"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+                        <TextView
+                            android:id="@+id/enroll_t"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/bmdohyeon"
+                            android:padding="10dp"
+                            android:text="팝니다 등록"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                        <LinearLayout
+                            android:id="@+id/guideline4"
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginBottom="0dp"
+                            android:background="#7db57c"
+                            android:orientation="horizontal">
+
+
+                        </LinearLayout>
+                        <TableLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:orientation="horizontal">
+                            <TableRow>
+                                <TextView
+                                    android:id="@+id/image_t"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:text="상품 사진"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent">
+                                    <ImageView
+                                        android:id="@+id/photo"
+                                        android:layout_width="166dp"
+                                        android:layout_height="86dp"
+                                        android:layout_weight="0.5"
+                                        app:srcCompat="@drawable/ic_ddiptok" />
+
+                                    <Button
+                                        android:id="@+id/uploadImage_btn"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:background="#7db57c"
+                                        android:text="촬영"
+                                        android:textColor="#FFFFFF" />
+                                </LinearLayout>
+
+                            </TableRow>
+                            <TableRow>
+                                <TextView
+                                    android:id="@+id/category_t"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:text="카테고리"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                                <Spinner
+                                    android:id="@+id/categorySpinner"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="46dp"
+                                    android:layout_marginStart="10dp"
+                                    android:gravity="center"
+                                    android:textAlignment="center" />
+                            </TableRow>
+                            <TableRow>
+
+                                <TextView
+                                    android:id="@+id/itemName_t"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:text="상품 이름"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                                <EditText
+                                    android:id="@+id/itemName"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/textfield_line"
+                                    android:ems="10"
+                                    android:layout_margin="5dp"
+                                    android:inputType="text"
+                                    android:padding="10dp" />
+                            </TableRow>
+
+                            <TableRow>
+
+                                <TextView
+                                    android:id="@+id/itemCount_t"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:text="상품 수량"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent">
+
+                                    <EditText
+                                        android:id="@+id/itemCount"
+                                        android:layout_width="40dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.5"
+                                        android:background="@drawable/textfield_line"
+                                        android:ems="10"
+                                        android:layout_margin="5dp"
+                                        android:inputType="number"
+                                        android:padding="10dp" />
+
+                                    <TextView
+                                        android:id="@+id/textView2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_weight="1.0"
+                                        android:gravity="center"
+                                        android:text="개"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                                </LinearLayout>
+
+                            </TableRow>
+                            <TableRow>
+
+                                <TextView
+                                    android:id="@+id/rawPrice_t"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:text="정가"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                                <EditText
+                                    android:id="@+id/rawPrice"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/textfield_line"
+                                    android:ems="10"
+                                    android:inputType="textPersonName|number"
+                                    android:padding="10dp" />
+                            </TableRow>
+                            <TableRow>
+
+                                <TextView
+                                    android:id="@+id/salePrice_t"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:text="판매 가격"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                                <EditText
+                                    android:id="@+id/salePrice"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/textfield_line"
+                                    android:ems="10"
+                                    android:inputType="textPersonName|number"
+                                    android:padding="10dp" />
+                            </TableRow>
+                            <TableRow>
+
+                                <TextView
+                                    android:id="@+id/updatePrice_t"
+                                    android:layout_width="109dp"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:text="가격 변동 기능 사용"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                                <CheckBox
+                                    android:id="@+id/updatePriceYES"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="left"
+                                    android:layout_weight="2.0"
+                                    android:text="사용" />
+                            </TableRow>
+                            <TableRow>
+
+                                <TextView
+                                    android:id="@+id/minPrice_t"
+                                    android:layout_width="109dp"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:text="최소 개당 가격"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                                <EditText
+                                    android:id="@+id/minPrice"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/textfield_line"
+                                    android:ems="10"
+                                    android:enabled="false"
+                                    android:inputType="textPersonName|number"
+                                    android:padding="10dp" />
+                            </TableRow>
+                            <TableRow>
+
+                                <TextView
+                                    android:id="@+id/saleTime_t"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginBottom="5dp"
+                                    android:gravity="center"
+                                    android:text="판매 시간"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent">
+
+                                    <Spinner
+                                        android:id="@+id/saleHourTimeSpinner"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginBottom="5dp"
+                                        android:layout_weight="1.0" />
+
+                                    <Spinner
+                                        android:id="@+id/saleMinuteTimeSpinner"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginBottom="5dp"
+                                        android:layout_weight="1.0" />
+                                </LinearLayout>
+
+                            </TableRow>
+                            <TableRow>
+
+                                <TextView
+                                    android:id="@+id/startTime_t"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginBottom="5dp"
+                                    android:gravity="center"
+                                    android:text="판매 시작 시간"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                                <EditText
+                                    android:id="@+id/startTime"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/textfield_line"
+                                    android:ems="10"
+                                    android:enabled="false"
+                                    android:inputType="textPersonName|number"
+                                    android:padding="10dp" />
+                            </TableRow>
+                            <TableRow>
+
+                                <TextView
+                                    android:id="@+id/endTime_t"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginBottom="5dp"
+                                    android:gravity="center"
+                                    android:text="판매 종료 시간"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                                <EditText
+                                    android:id="@+id/endTime"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/textfield_line"
+                                    android:ems="10"
+                                    android:enabled="false"
+                                    android:inputType="textPersonName|number"
+                                    android:padding="10dp" />
+                            </TableRow>
+                            <TableRow>
+
+                                <TextView
+                                    android:id="@+id/delivery_t"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:text="배달 가능 여부"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                                <CheckBox
+                                    android:id="@+id/deliveryYES"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="left"
+                                    android:layout_weight="2.0"
+                                    android:text="가능" />
+                            </TableRow>
+                        </TableLayout>
+
+
+                        <Button
+                            android:id="@+id/Item_Upload_btn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#7db57c"
+                            android:text="팝니다 등록"
+                            android:textColor="#FFFFFF" />
+                        <TextView
+                            android:id="@+id/management_t"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/WantToBuyTitleWrapper"
+                            android:fontFamily="@font/bmdohyeon"
+                            android:padding="10dp"
+                            android:text="팝니다 관리"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                        <LinearLayout
+                            android:id="@+id/guideline3"
+                            android:layout_below="@id/management_t"
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginBottom="0dp"
+                            android:background="#7db57c"
+                            android:orientation="horizontal">
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/columnWrapper"
+                            android:layout_below="@+id/ReviewWriteTitleWrapper"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="0dp"
+                            android:orientation="horizontal">
+
+
+                            <LinearLayout
+                                android:id="@+id/UIitemName_t_wrapper"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/UIitemName_t"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="상품 이름"
+                                    android:textAppearance="@style/TextAppearance.Compat.Notification.Title" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/UIendTime_t_wrapper"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/UIendTime_t"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="판매 종료 시간"
+                                    android:textAppearance="@style/TextAppearance.Compat.Notification.Title" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/UIitemPrice_t_wrapper"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.8"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/UIitemPrice_t"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="현재 판매 가격"
+                                    android:textAppearance="@style/TextAppearance.Compat.Notification.Title" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/UIreUpload_t_wrapper"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.8"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/UIreUpload_t"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="재등록"
+                                    android:textAppearance="@style/TextAppearance.Compat.Notification.Title" />
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/guideline2"
+                            android:layout_below="@id/columnWrapper"
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginBottom="0dp"
+                            android:background="#7db57c"
+                            android:orientation="horizontal">
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/UploadedItemList"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"></LinearLayout>
+                    </LinearLayout>
+                </ScrollView>
+
+
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/drawer_menulist"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:background="#7db57c" />
+    </android.support.v4.widget.DrawerLayout>
+</android.support.constraint.ConstraintLayout>

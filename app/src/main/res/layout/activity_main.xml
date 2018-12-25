@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <RelativeLayout
+            android:id="@+id/contents"
+            android:background="#FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/mylocationWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/mylocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#7db57c"
+                    android:text="현재 위치"
+                    android:textColor="#FFFFFF" />
+
+
+            </LinearLayout>
+
+            <ScrollView
+                android:id="@+id/ItemListWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="251dp"
+                android:layout_below="@+id/mylocationWrapper"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="0dp">
+
+                <LinearLayout
+                    android:id="@+id/ItemList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TableLayout
+                        android:id="@+id/categoryTable"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#FFF">
+
+                        <TableRow
+                            android:id="@+id/row1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4">
+
+                            <ImageView
+                                android:id="@+id/all"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_weight="1"
+                                android:paddingTop="30dp"
+                                app:srcCompat="@drawable/all" />
+
+                            <ImageView
+                                android:id="@+id/fastfood"
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:paddingTop="30dp"
+                                app:srcCompat="@drawable/fastfood" />
+
+                            <ImageView
+                                android:id="@+id/meat"
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:paddingTop="30dp"
+                                app:srcCompat="@drawable/meat" />
+
+                            <ImageView
+                                android:id="@+id/japan"
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:paddingTop="30dp"
+                                app:srcCompat="@drawable/japan" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/row2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4">
+
+                            <TextView
+                                android:id="@+id/all_t"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="전체"
+                                android:textAlignment="center"
+                                android:textColor="#666" />
+
+                            <TextView
+                                android:id="@+id/fastfood_t"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="치킨/피자"
+                                android:textAlignment="center"
+                                android:textColor="#666" />
+
+                            <TextView
+                                android:id="@+id/meat_t"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="족발/보쌈"
+                                android:textAlignment="center"
+                                android:textColor="#666" />
+
+                            <TextView
+                                android:id="@+id/japan_t"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="돈까스/일식"
+                                android:textAlignment="center"
+                                android:textColor="#666" />
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/row3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4">
+
+                            <ImageView
+                                android:id="@+id/cafe"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:layout_weight="1"
+                                android:paddingTop="30dp"
+                                app:srcCompat="@drawable/cafe" />
+
+                            <ImageView
+                                android:id="@+id/fruit"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:paddingTop="30dp"
+                                app:srcCompat="@drawable/fruit" />
+
+                            <ImageView
+                                android:id="@+id/dessert"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:paddingTop="30dp"
+                                app:srcCompat="@drawable/dessert" />
+
+                            <ImageView
+                                android:id="@+id/etc"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:paddingTop="30dp"
+                                app:srcCompat="@drawable/etc" />
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/row4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/cafe_t"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="카페/음료"
+                                android:textAlignment="center"
+                                android:textColor="#666" />
+
+                            <TextView
+                                android:id="@+id/fruit_t"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="신선품"
+                                android:textAlignment="center"
+                                android:textColor="#666" />
+
+                            <TextView
+                                android:id="@+id/dessert_t"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="디저트/빵"
+                                android:textAlignment="center"
+                                android:textColor="#666" />
+
+                            <TextView
+                                android:id="@+id/etc_t"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="기타"
+                                android:textAlignment="center"
+                                android:textColor="#666" />
+                        </TableRow>
+                    </TableLayout>
+                    <LinearLayout
+                        android:id="@+id/filter"
+                        android:layout_width="match_parent"
+
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/map_btn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginTop="0dp"
+                            android:background="#7db57c"
+                            android:textColor="#ffffff"
+                            android:text="지도로 검색"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                        <Spinner
+                            android:id="@+id/sortSpinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginEnd="0dp" />
+                        <LinearLayout
+                            android:id="@+id/guideline4"
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginBottom="0dp"
+                            android:background="#7db57c"
+                            android:orientation="horizontal"></LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/SortedItemList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"></LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/drawer_menulist"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:background="#7db57c" />
+    </android.support.v4.widget.DrawerLayout>
+</android.support.constraint.ConstraintLayout>
